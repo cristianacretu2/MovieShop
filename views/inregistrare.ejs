@@ -1,0 +1,34 @@
+<main>
+    <div class="welcome-msg">
+        <h2>Creează un cont nou</h2>
+        <p>Completează datele de mai jos pentru a deveni membru.</p>
+    </div>
+
+    <% if (eroare) { %> 
+        <div class="error-msg"><%= eroare %></div> 
+    <% } %>
+
+    <form action="/creare-cont" method="POST">
+        <div class="form-group">
+            <label for="nume">Nume:</label>
+            <input type="text" id="nume" name="nume" placeholder="Ex: Popescu" required>
+        </div>
+        <div class="form-group">
+            <label for="prenume">Prenume:</label>
+            <input type="text" id="prenume" name="prenume" placeholder="Ex: Dan" required>
+        </div>
+        <div class="form-group">
+            <label for="utilizator">Nume Utilizator:</label>
+            <input type="text" id="utilizator" name="utilizator" placeholder="Utilizator unic" required>
+        </div>
+        <div class="form-group">
+            <label for="parola">Parolă:</label>
+            <input type="password" id="parola" name="parola" placeholder="Minim 5 caractere" required>
+        </div>
+        
+        <button type="submit">Înregistrare</button>
+        <p style="margin-top: 20px; color: var(--text-muted);">
+            Ai deja cont? <a href="/autentificare" style="color: var(--accent-orange);">Autentifică-te</a>
+        </p>
+    </form>
+</main>

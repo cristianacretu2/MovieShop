@@ -1,0 +1,22 @@
+[
+  {
+    "utilizator": "admin",
+    "parola": "$2b$10$3Q2hzNzmOP2yTFlmINF7I.tCYFiaGivUfFLpSJvVLr8qRKjdZHlxm", 
+    "nume": "Ionescu",
+    "prenume": "Ion",
+    "rol": "ADMIN"
+  },
+  {
+    "utilizator": "ioana123",
+    "nume": "ioana",
+    "prenume": "ioana",
+    "parola": "$2b$10$sBOuwHOloIiOnMWGjfJ94.P6cg9YHcV8YKnBEHBi2Jld8VAAI/hBO",
+    "rol": "USER"
+  },
+  {
+    "utilizator": "delia",
+    "nume": "delia",
+    "prenume": "delia",
+    "parola": "$2b$10$7CYqbRcHsbj5Mws.8S2Uv.jzJAS2FgawYUgcVUwJrLmAkLrBN6Wk6"
+  }
+]

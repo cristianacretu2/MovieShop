@@ -1,0 +1,24 @@
+<div class="admin-container">
+    <h2>Gestionare Produse (Admin)</h2>
+    
+    <form action="/admin/adaugare-produs" method="POST" class="admin-form">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+        <div class="form-group">
+            <label for="nume">Nume Film:</label>
+            <input type="text" id="nume" name="nume" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pret">Preț (RON):</label>
+            <input type="number" step="0.01" id="pret" name="pret" required>
+        </div>
+
+        <div class="form-group">
+            <label for="descriere">Descriere:</label>
+            <textarea id="descriere" name="descriere" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn-db btn-insert">Adaugă în Baza de Date</button>
+    </form>
+</div>

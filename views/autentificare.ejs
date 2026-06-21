@@ -1,0 +1,23 @@
+<!-- structura formular de autentificare -->
+
+<h2>Autentificare</h2>
+
+<% if (eroare) { %> 
+    <p class="error-msg"><%= eroare %></p> 
+<% } %>
+
+<form action="/verificare-autentificare" method="POST">
+    </form>
+
+<form action="/verificare-autentificare" method="POST"> 
+    <div>
+        <label for="utilizator">Utilizator:</label>
+        <input type="text" id="utilizator" name="utilizator" required> 
+    </div>
+    <div>
+        <label for="parola">Parolă:</label>
+        <input type="password" id="parola" name="parola" required> 
+    </div>
+    <button type="submit">Autentificare</button> 
+
+</form>

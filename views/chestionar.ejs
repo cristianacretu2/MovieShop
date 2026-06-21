@@ -1,0 +1,16 @@
+
+<h2>Chestionar Filme</h2>
+<form method="POST" action="/rezultat-chestionar">
+    <% intrebari.forEach((obj, qIndex) => { %>
+        <div class="question-container">
+            <p class="question-text"><strong><%= qIndex + 1 %>. <%= obj.intrebare %></strong></p>
+            <% obj.variante.forEach((varianta, vIndex) => { %>
+                <label>
+                    <input type="radio" name="raspuns-<%= qIndex %>" value="<%= vIndex %>" required>
+                    <%= varianta %>
+                </label>
+            <% }) %>
+        </div>
+    <% }) %>
+    <button type="submit">Trimite răspunsurile</button>
+</form>

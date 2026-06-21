@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieShop</title>
+    <link rel="stylesheet" href="/css/stil.css">
+</head>
+<body>
+    <header>
+        <h1>🎥 MovieShop</h1>
+
+        <nav>
+            <a href="/">Acasă</a>
+            <a href="/chestionar">Chestionar</a>
+            <% if (utilizatorSesiune) { %>
+                <a href="/deconectare" class="nav-logout">Deconectare</a>
+            <% } else { %>
+                <a href="/autentificare">Autentificare</a>
+            <% } %>
+        </nav>
+    </header>
+
+    <main>
+        <%- body %>    
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Filme. Toate drepturile rezervate.</p>
+    </footer>
+</body>
+</html>

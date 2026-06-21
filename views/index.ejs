@@ -1,0 +1,68 @@
+
+<div class="welcome-msg">
+    <h2>Pagina Principală</h2>
+    <% if (utilizator) { %>
+        <h3>Bine ai venit, <span style="color: var(--emerald)"><%= utilizator %></span>!</h3>
+    <% } else { %>
+        <h3>Bine ai venit!</h3>
+        <p>Autentifică-te pentru a beneficia de toate promoțiile.</p>
+        <a href="/autentificare" class="btn-auth">Logare client</a>
+        <a href="/inregistrare" class="btn-auth">Înregistrare</a>
+    <% } %>
+
+    <% if (locals.session && locals.session.rol === 'ADMIN') { %>
+    <div class="admin-access-box" style="margin-bottom: 20px; padding: 10px; border: 1px dashed #d32f2f; border-radius: 8px;">
+        <p>⭐ <strong>Cont Administrator:</strong> Aveți permisiuni pentru gestionarea produselor.</p>
+        <a href="/admin" class="btn-auth" style="background-color: #d32f2f; color: white;">
+            ⚙️ Accesează Pagina Admin
+        </a>
+    </div>
+<% } %>
+
+    <a href="/vizualizare-cos" class="btn-auth" style="margin-bottom: 20px;">
+        🛒 Vezi Coșul (<%= (locals.session && locals.session.cos) ? locals.session.cos.length : 0 %>)
+    </a>
+
+    <div class="db-controls">
+        <h3>Administrare Bază de Date</h3>
+        <form action="/creare-bd" method="POST">
+            <button type="submit" class="btn-db btn-create">Creare BD</button>
+        </form>
+
+        <form action="/inserare-bd" method="POST">
+            <button type="submit" class="btn-db btn-insert">Încărcare BD</button>
+        </form>
+    </div>
+
+    <div class="movies-grid">
+    <% if (produse && produse.length > 0) { %>
+        
+        <% produse.forEach(film => { %>
+            <div class="product-card">
+                <h3 class="product-title"><%= film.nume %></h3>
+                <p class="product-description"><%= film.descriere %></p>
+                
+                <div class="product-footer">
+                    <span class="product-price"><%= film.pret %> RON</span>
+                    
+                    <% if (utilizator) { %>
+                        <form action="/adaugare-cos" method="POST" class="form-add-cart">
+                            <input type="hidden" name="id" value="<%= film.id %>">
+                            <button type="submit" class="btn-add">Adaugă în coș</button>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+        <% }); %>
+
+    <% } else { %>
+        <div class="empty-db-msg">
+            <p>Momentan nu există produse în baza de date.</p>
+            <p>Folosiți butoanele de Administrare pentru a popula tabela.</p>
+        </div>
+    <% } %>
+    </div>
+
+
+</div>
+

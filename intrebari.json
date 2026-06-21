@@ -1,0 +1,42 @@
+[
+    {
+        "intrebare": "Cine a regizat filmul 'Interstellar'?",
+        "variante": ["Steven Spielberg", "Christopher Nolan", "Quentin Tarantino", "James Cameron"],
+        "corect": 1
+    },
+    {
+        "intrebare": "Care film a câștigat Oscarul pentru cel mai bun film în 2024?",
+        "variante": ["Barbie", "Oppenheimer", "Poor Things", "Killers of the Flower Moon"],
+        "corect": 1
+    },
+    {
+        "intrebare": "În ce an a fost lansat primul film din seria 'The Godfather'?",
+        "variante": ["1968", "1970", "1972", "1975"],
+        "corect": 2
+    },
+    {
+        "intrebare": "Ce actor joacă rolul principal în 'The Revenant'?",
+        "variante": ["Brad Pitt", "Tom Hardy", "Leonardo DiCaprio", "Christian Bale"],
+        "corect": 2
+    },
+    {
+        "intrebare": "Care este filmul cu cele mai mari încasări din toate timpurile (fără ajustarea inflației)?",
+        "variante": ["Avengers: Endgame", "Titanic", "Avatar", "Star Wars: The Force Awakens"],
+        "corect": 2
+    },
+    {
+        "intrebare": "Ce film de animație produs de Disney a fost primul lungmetraj realizat în întregime pe calculator?",
+        "variante": ["Toy Story", "Shrek", "The Lion King", "Finding Nemo"],
+        "corect": 0
+    },
+    {
+        "intrebare": "În ce film horror apare personajul iconic Pennywise?",
+        "variante": ["The Shining", "It", "Halloween", "A Nightmare on Elm Street"],
+        "corect": 1
+    },
+    {
+        "intrebare": "Câte premii Oscar a câștigat în total filmul 'Titanic' (1997)?",
+        "variante": ["9", "10", "11", "12"],
+        "corect": 2
+    }
+]

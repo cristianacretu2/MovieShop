@@ -1,0 +1,33 @@
+{
+  "name": "p2",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/HDR-2025-2026/proiect-2-cristianacretu2#readme",
+  "bugs": {
+    "url": "https://github.com/HDR-2025-2026/proiect-2-cristianacretu2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HDR-2025-2026/proiect-2-cristianacretu2.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.2",
+    "cookie-parser": "^1.4.7",
+    "csurf": "^1.11.0",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-rate-limit": "^8.5.2",
+    "express-session": "^1.19.0",
+    "express-validator": "^7.3.2",
+    "sqlite3": "^6.0.1"
+  }
+}

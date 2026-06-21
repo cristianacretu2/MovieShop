@@ -1,0 +1,46 @@
+<main>
+    <section class="welcome-msg">
+        <h2>Coșul tău de cumpărături</h2>
+        <p>Verifică filmele selectate înainte de a finaliza comanda.</p>
+    </section>
+
+    <% if (produse && produse.length > 0) { %>
+        <div class="cart-wrapper">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Film</th>
+                        <th>Descriere</th>
+                        <th>Preț</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% produse.forEach(film => { %>
+                        <tr>
+                            <td class="product-title-cell"><strong><%= film.nume %></strong></td>
+                            <td class="product-desc-cell"><%= film.descriere %></td>
+                            <td class="product-price-cell"><%= film.pret %> RON</td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" class="total-label">Total de plată:</td>
+                        <td class="total-amount"><%= total %> RON</td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <div class="db-controls" style="border-style: solid; margin-top: 30px;">
+                <a href="/" class="btn-db btn-create">Inapoi la magazin</a>
+                <button class="btn-db btn-insert" onclick="alert('Comandă finalizată!')">Finalizează Comanda</button>
+            </div>
+        </div>
+
+    <% } else { %>
+        <div class="db-controls">
+            <p style="margin-bottom: 20px; color: var(--text-muted);">Coșul tău este gol momentan.</p>
+            <a href="/" class="btn-db btn-insert">Mergi să alegi un film</a>
+        </div>
+    <% } %>
+</main>
